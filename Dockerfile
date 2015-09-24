@@ -10,5 +10,6 @@ EXPOSE 8080
 EXPOSE 9999
 ADD entrypoint.sh /
 RUN chmod +x /entrypoint.sh
+VOLUME /usr/local/tomcat/logs
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["catalina.sh", "run"]
