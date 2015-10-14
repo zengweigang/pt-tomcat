@@ -18,6 +18,7 @@
 <Service name="Internal">
 <Connector port="9999" protocol="HTTP/1.1"
            connectionTimeout="20000"
+           Server=" "
            redirectPort="8443" />
 <Engine name="Internal" defaultHost="Internal">
 
@@ -37,6 +38,8 @@
 <Service name="External">
 <Connector port="8080" protocol="HTTP/1.1"
            connectionTimeout="20000"
+           Secure="true"
+           Server=" " 
            redirectPort="8443" />
 <Engine name="External" defaultHost="External">
 

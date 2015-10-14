@@ -1,4 +1,10 @@
-# 环境变量
+# 构建
+
+    docker build -t 36b.me/pt-tomcat .
+    
+base镜像使用了`36b.me/tomcat:8-jre8`, 这个镜像和官方的`tomcat:8-jre8`一模一样, 只是上传在了私库中方便国内快速访问
+
+# 启动时环境变量, 设置context.xml
 
 设置 SESSION_DOMAIN 则会把context.xml中的sessionCookieDomain设置为那个环境变量, 不然默认是localhost
 
