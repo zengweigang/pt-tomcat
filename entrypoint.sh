@@ -24,7 +24,7 @@ else
         LINE="$LINE endpoint=\"$DYNAMO_ENDPOINT\""
     fi
 
-    LINE="$LINE />"
+    LINE="$LINE /><Valve  className=\"com.amazonaws.services.dynamodb.sessionmanager.DynamoSessionValve\"/>"
 
     sed -i "s|{{session_manager}}|$LINE|g" /usr/local/tomcat/conf/context.xml
 fi 
