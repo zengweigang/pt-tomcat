@@ -1,4 +1,4 @@
-FROM 36b.me/tomcat:8-jre8
+FROM tomcat:8-jre8
 
 ADD entrypoint.sh /
 RUN apt-get clean && chmod +x /entrypoint.sh && rm -Rf /usr/local/tomcat/webapps/* && mkdir -p /usr/local/tomcat/internal /usr/local/tomcat/external
