@@ -19,7 +19,8 @@
 <Connector port="9999" protocol="HTTP/1.1"
            connectionTimeout="20000"
            Server=" "
-           redirectPort="8443">
+           redirectPort="8443" />
+<Engine name="Internal" defaultHost="Internal">
 
   <Realm className="org.apache.catalina.realm.LockOutRealm">
     <Realm className="org.apache.catalina.realm.UserDatabaseRealm"
@@ -39,7 +40,7 @@
            connectionTimeout="20000"
            Secure="true"
            Server=" " 
-           redirectPort="8443"/>
+           redirectPort="8443" />
 <Engine name="External" defaultHost="External">
 
   <Realm className="org.apache.catalina.realm.LockOutRealm">
