@@ -19,12 +19,7 @@
 <Connector port="9999" protocol="HTTP/1.1"
            connectionTimeout="20000"
            Server=" "
-           redirectPort="8443" useSendfile="false"
-            compression="on"
-            compressionMinSize="100"
-            noCompressionUserAgents="gozilla, traviata"
-            compressableMimeType="text/html,text/xml,text/plain,text/css,text/javascript,text/json"/>
-<Engine name="Internal" defaultHost="Internal">
+           redirectPort="8443">
 
   <Realm className="org.apache.catalina.realm.LockOutRealm">
     <Realm className="org.apache.catalina.realm.UserDatabaseRealm"
@@ -44,11 +39,7 @@
            connectionTimeout="20000"
            Secure="true"
            Server=" " 
-           redirectPort="8443" useSendfile="false"
-            compression="on"
-            compressionMinSize="100"
-            noCompressionUserAgents="gozilla, traviata"
-            compressableMimeType="text/html,text/xml,text/plain,text/css,text/javascript,text/json"/>
+           redirectPort="8443"/>
 <Engine name="External" defaultHost="External">
 
   <Realm className="org.apache.catalina.realm.LockOutRealm">
